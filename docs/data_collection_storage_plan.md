@@ -4,7 +4,7 @@
 
 Build the first project milestone: a Postgres-backed daily ETF securities master for research and later paper trading.
 
-The design follows Chapter 7 of the attached algo trading book, especially the securities-master pattern around `exchange`, `data_vendor`, `symbol`, and `daily_price`, while modernizing the stack from MySQL/Yahoo CSV endpoints to Dockerized Postgres and `yfinance`.
+The design uses a normalized securities-master pattern around `exchange`, `data_vendor`, `symbol`, and `daily_price`, while modernizing the stack from older MySQL/Yahoo CSV workflows to Dockerized Postgres and `yfinance`.
 
 ## Key Changes
 
@@ -30,7 +30,6 @@ The design follows Chapter 7 of the attached algo trading book, especially the s
 - Store `created_at` and `updated_at` timestamps on core records.
 - Make data retrieval easy from pandas via SQL queries.
 - Prefer automated scripts for repeatable download, storage, and validation.
-- Keep the attached PDF path referenced in the plan: `/Users/JMSaadon/Downloads/Algo_20Trading_20Overview_20Book_20(Start_20Here).pdf`, especially PDF pages 56-69.
 
 ## Implementation Plan
 

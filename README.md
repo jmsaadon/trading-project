@@ -2,8 +2,6 @@
 
 This repository starts with a Postgres-backed daily ETF securities master. The first milestone is data collection and storage only: no trading, signal generation, or backtesting code is included yet.
 
-The data design follows the securities-master conventions from the attached algo trading book, especially Chapter 7 / PDF pages 56-69.
-
 ## Quick Start
 
 ```bash
