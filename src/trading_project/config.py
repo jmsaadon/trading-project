@@ -29,17 +29,10 @@ class DataConfig:
 
 
 @dataclass(frozen=True)
-class BookReferenceConfig:
-    pdf_path: str
-    relevant_pdf_pages: str
-
-
-@dataclass(frozen=True)
 class AppConfig:
     database_url: str
     data_vendor: DataVendorConfig
     data: DataConfig
-    book_reference: BookReferenceConfig
 
 
 def _read_yaml(path: Path) -> dict[str, Any]:
@@ -67,7 +60,6 @@ def load_config(path: str | Path = DEFAULT_SETTINGS_PATH) -> AppConfig:
 
     vendor = raw.get("data_vendor", {})
     data = raw.get("data", {})
-    book = raw.get("book_reference", {})
 
     return AppConfig(
         database_url=database_url,
@@ -81,12 +73,5 @@ def load_config(path: str | Path = DEFAULT_SETTINGS_PATH) -> AppConfig:
             universe_path=resolve_project_path(data.get("universe_path", DEFAULT_UNIVERSE_PATH)),
             default_backfill_start=data.get("default_backfill_start", "1990-01-01"),
             stale_days=int(data.get("stale_days", 7)),
-        ),
-        book_reference=BookReferenceConfig(
-            pdf_path=book.get(
-                "pdf_path",
-                "/Users/JMSaadon/Downloads/Algo_20Trading_20Overview_20Book_20(Start_20Here).pdf",
-            ),
-            relevant_pdf_pages=str(book.get("relevant_pdf_pages", "56-69")),
         ),
     )

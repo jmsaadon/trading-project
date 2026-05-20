@@ -11,7 +11,3 @@ data:
   universe_path: config/universe.yaml
   default_backfill_start: "1990-01-01"
   stale_days: 7
-
-book_reference:
-  pdf_path: /Users/JMSaadon/Downloads/Algo_20Trading_20Overview_20Book_20(Start_20Here).pdf
-  relevant_pdf_pages: "56-69"
