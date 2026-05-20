@@ -1,0 +1,66 @@
+relationships:
+  - name: gdx_gld_spy
+    target: GDX
+    explanatory:
+      - GLD
+      - SPY
+    description: Gold miners relative to gold and broad equities.
+
+  - name: xle_uso_spy
+    target: XLE
+    explanatory:
+      - USO
+      - SPY
+    description: Energy equities relative to crude oil and broad equities.
+
+  - name: xlf_kre
+    target: XLF
+    explanatory:
+      - KRE
+    description: Broad financials relative to regional banks.
+
+  - name: qqq_xlk_spy
+    target: QQQ
+    explanatory:
+      - XLK
+      - SPY
+    description: Nasdaq 100 exposure relative to technology and broad equities.
+
+  - name: iwm_spy
+    target: IWM
+    explanatory:
+      - SPY
+    description: Small caps relative to large caps.
+
+  - name: tlt_ief
+    target: TLT
+    explanatory:
+      - IEF
+    description: Long-duration Treasuries relative to intermediate-duration Treasuries.
+
+  - name: hyg_lqd_spy
+    target: HYG
+    explanatory:
+      - LQD
+      - SPY
+    description: High-yield credit relative to investment-grade credit and broad equities.
+
+  - name: eem_efa_spy
+    target: EEM
+    explanatory:
+      - EFA
+      - SPY
+    description: Emerging markets relative to developed international equities and broad equities.
+
+  - name: xly_xlp
+    target: XLY
+    explanatory:
+      - XLP
+    description: Consumer discretionary relative to consumer staples.
+
+  - name: xlu_tlt_spy
+    target: XLU
+    explanatory:
+      - TLT
+      - SPY
+    description: Utilities relative to long-duration Treasuries and broad equities.

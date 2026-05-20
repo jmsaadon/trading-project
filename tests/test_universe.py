@@ -4,9 +4,10 @@ from trading_project.data.universe import load_universe
 def test_load_universe_contains_readme_etfs():
     universe = load_universe("config/universe.yaml")
 
-    assert len(universe.symbols) == 30
+    assert len(universe.symbols) == 31
     assert "SPY" in universe.tickers
     assert "GDX" in universe.tickers
+    assert "KRE" in universe.tickers
     assert "EWU" in universe.tickers
 
 
